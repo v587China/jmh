@@ -25,7 +25,7 @@ import com.ultra.jmh.json.bean.Person;
 @BenchmarkMode(Mode.SingleShotTime)
 @OutputTimeUnit(TimeUnit.SECONDS)
 @State(Scope.Benchmark)
-public class ToStringBenchmark {
+public class TostringBenchmark {
     /**
      * 序列化次数参数
      */
@@ -41,7 +41,7 @@ public class ToStringBenchmark {
 //Jackson   0.386           0.507           0.771
 //JsonLib   0.587           3.040           9.405
     public static void main(String[] args) throws Exception {
-        Options opt = new OptionsBuilder().include(ToStringBenchmark.class.getSimpleName()).forks(1).warmupIterations(0)
+        Options opt = new OptionsBuilder().include(TostringBenchmark.class.getSimpleName()).forks(1).warmupIterations(0)
                 .build();
         new Runner(opt).run();
         // Collection<RunResult> results = new Runner(opt).run();
